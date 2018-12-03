@@ -13,6 +13,7 @@ lastupdated: "2018-11-29"
 {:screen: .screen}
 {:tip: .tip}
 {:download: .download}
+{:DomainName: data-hd-keyref="DomainName"}
 
 # IBM Cloud CLI for VPC Reference
 {: #vpc-reference}

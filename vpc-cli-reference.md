@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018, 2019
-lastupdated: "2019-01-28"
+lastupdated: "2019-03-19"
 
 ---
 
@@ -26,6 +26,7 @@ This document is organized into sections:
 * [Regions and Zones CLI commands](#geography)
 * [VPN CLI commands](#vpn)
 * [Load Balancers CLI commands](#load-balancers)
+* [Storage CLI commands](#storage)
 
 
 ## Pre-requisites:
@@ -2160,3 +2161,108 @@ This section gives details about the CLI commands available for working with Loa
 - `LOAD_BALANCER_ID`: ID of the load balancer.
 - `--json`: Format output in JSON.
   
+## Storage CLI commands
+{: #storage}
+
+This section gives details about the CLI commands available for working with block storage volumes.
+
+# Volume Profile
+  
+### `ibmcloud is volume-profile`
+
+#### View details of a volume profile.
+
+`ibmcloud is volume-profile PROFILE_NAME [--json]`
+
+**options**
+
+- `PROFILE_NAME`: Name of the volume profile.  Volume profile names are 10iops-tier, 5iops-tier, general-purpose, and custom.
+- `--json`: Format output in JSON.
+
+---
+
+### `ibmcloud is volume-profiles`
+
+#### List all volume profiles.
+
+`ibmcloud is volume-profiles [--json]`
+
+**options**
+
+- `--json`: Format output in JSON.
+
+---
+
+## Volume
+
+### `ibmcloud is volume`
+
+#### View details of a volume.
+
+`ibmcloud is volume VOLUME_ID [--json]`
+
+**options**
+
+- `VOLUME_ID`: ID of the volume.
+- `--json`: Format output in JSON.
+
+---
+
+### `ibmcloud is volumes`
+
+#### List all volumes.
+
+`ibmcloud is volumes [--json]`
+
+**options**
+
+- `--json`: Format output in JSON.
+
+---
+
+### `ibmcloud is volume-create`
+
+#### Create a volume.
+
+`ibmcloud is volume-create VOLUME_NAME PROFILE_NAME ZONE_NAME [--encryption-key ENCRYPTION_KEY] [--capacity CAPACITY] [--iops IOPS] [--resource-group-id RESOURCE_GROUP_ID | --resource-group-name RESOURCE_GROUP_NAME] [--json]`
+
+**options**
+
+- `VOLUME_NAME`: Name of the volume you specify.
+- `PROFILE_NAME`: Name of the volume profile, for example, general-purpose.
+- `ZONE_NAME`: Name of zone.  For example, us-south-1.
+- `--capacity`: Capacity of the volume in GB, from 10 GB to 20,000 GB. Defaults to 100 GB.
+- `--iops`: Input/Output Operations Per Second for the volume.
+- `--encryption-key`: The CRN (Cloud Resource Name) of the root key in IBM Key Protect service.
+- `--resource-group-id`: ID of the resource group. This option is exclusive with --resource-group-name.
+- `--resource-group-name`: Name of the resource group. This option is exclusive with --resource-group-id.
+- `--json`: Format output in JSON.
+
+---
+
+### `ibmcloud is volume-delete`
+
+#### Delete a volume.
+
+`ibmcloud is volume-delete VOLUME_ID [-f, --force]`
+
+**options**
+
+- `VOLUME_ID`: ID of the volume.
+- `--force, -f`: Force the operation without confirmation.
+
+---
+
+### `ibmcloud is volume-update`
+
+#### Update a volume.
+
+`ibmcloud is volume-update VOLUME_ID [--name NEW_NAME] [--json]`
+
+**options**
+
+- `VOLUME_ID`: ID of the volume.
+- `--name`: New name of the volume.
+- `--json`: Format output in JSON.
+
+---

@@ -2176,7 +2176,7 @@ This section gives details about the CLI commands available for working with blo
 
 **options**
 
-- `PROFILE_NAME`: Name of the volume profile.  Volume profile names are 10iops-tier, 5iops-tier, general-purpose, and custom.
+- `PROFILE_NAME`: Name of the volume profile. Volume profile names are 10iops-tier, 5iops-tier, general-purpose, and custom.
 - `--json`: Format output in JSON.
 
 ---
@@ -2231,7 +2231,7 @@ This section gives details about the CLI commands available for working with blo
 - `VOLUME_NAME`: Name of the volume you specify.
 - `PROFILE_NAME`: Name of the volume profile, for example, general-purpose.
 - `ZONE_NAME`: Name of zone.  For example, us-south-1.
-- `--capacity`: Capacity of the volume in GB, from 10 GB to 20,000 GB. Defaults to 100 GB.
+- `--capacity`: Capacity of the volume in GB, from 10 GB to 2,000 GB. Defaults to 100 GB.
 - `--iops`: Input/Output Operations Per Second for the volume.
 - `--encryption-key`: The CRN (Cloud Resource Name) of the root key in IBM Key Protect service.
 - `--resource-group-id`: ID of the resource group. This option is exclusive with --resource-group-name.
